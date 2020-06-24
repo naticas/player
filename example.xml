@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ServiceList xmlns="urn:dvb:metadata:servicediscovery:2019" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tva="urn:tva:metadata:2019" version="1" xsi:schemaLocation="urn:dvb:metadata:servicediscovery:2019 ../dvbi_v1.0.xsd">
+  <Name>DVB-I example service list</Name>
+  <ProviderName>DVB</ProviderName>
+  <LCNTableList>
+    <LCNTable>
+      <LCN channelNumber="647" serviceRef="sid1"/>
+      <LCN channelNumber="11" serviceRef="sid2"/>
+      <LCN channelNumber="4" serviceRef="sid3"/>
+      <LCN channelNumber="3" serviceRef="sid4"/>
+      <LCN channelNumber="8" serviceRef="sid5"/>
+      <LCN channelNumber="12" serviceRef="sid6"/>
+      <LCN channelNumber="34" serviceRef="sid7"/>
+      <LCN channelNumber="324" serviceRef="sid8"/>
+      <LCN channelNumber="642" serviceRef="sid9"/>
+      <LCN channelNumber="640" serviceRef="sid10"/>
+      <LCN channelNumber="641" serviceRef="sid11"/>
+      <LCN channelNumber="643" serviceRef="sid12"/>
+      <LCN channelNumber="644" serviceRef="sid13"/>
+      <LCN channelNumber="645" serviceRef="sid14"/>
+    </LCNTable>
+  </LCNTableList>
+  <ContentGuideSource CGSID="cgid-1">
+    <ProviderName>DVB-I Reference Application</ProviderName>
+    <ScheduleInfoEndpoint contentType="application/xml">
+      <URI>https://stage.sofiadigital.fi/dvb/dvb-i-reference-application/backend/schedule.php</URI>
+    </ScheduleInfoEndpoint>
+  </ContentGuideSource>
+  <Service version="1">
+    <UniqueIdentifier>sid1</UniqueIdentifier>
+    <ServiceInstance priority="1">
+      <SourceType>urn:dvb:metadata:source:dvb-t</SourceType>
+      <DVBTDeliveryParameters>
+        <DVBTriplet origNetId="8916" tsId="4097" serviceId="74"/>
+        <TargetCountry>FIN</TargetCountry>
+      </DVBTDeliveryParameters>
+    </ServiceInstance>
+    <ServiceName>DVB-T channel 1</ServiceName>
+    <ProviderName>DVB</ProviderName>
+    <ContentGuideServiceRef>cgsid_1</ContentGuideServiceRef>
+  </Service>
+  <Service version="1">
+    <UniqueIdentifier>sid2</UniqueIdentifier>
+    <ServiceInstance priority="1">
+      <SourceType>urn:dvb:metadata:source:dvb-t</SourceType>
+      <DVBTDeliveryParameters>
+        <DVBTriplet origNetId="8916" tsId="4097" serviceId="62"/>
+        <TargetCountry>FIN</TargetCountry>
+      </DVBTDeliveryParameters>
+    </ServiceInstance>
+    <ServiceName>DVB-T channel 2</ServiceName>
+    <ProviderName>DVB</ProviderName>
+    <ContentGuideServiceRef>cgsid_2</ContentGuideServiceRef>
+  </Service>
+  <Service version="1">
+    <UniqueIdentifier>sid3</UniqueIdentifier>
+    <ServiceInstance priority="1">
+      <SourceType>urn:dvb:metadata:source:dvb-dash</SourceType>
+      <DASHDeliveryParameters>
+        <UriBasedLocation contentType="application/dash+xml">
+          <URI>https://livesim.dashif.org/livesim/testpic_2s/multi_subs.mpd</URI>
+        </UriBasedLocation>
+      </DASHDeliveryParameters>
+    </ServiceInstance>
+    <ServiceName>IRT test channel</ServiceName>
+    <ProviderName>IRT</ProviderName>
+    <ContentGuideServiceRef>cgsid_3</ContentGuideServiceRef>
+  </Service>
+  <Service version="1">
+    <UniqueIdentifier>sid4</UniqueIdentifier>
+    <ServiceInstance priority="1">
+      <SourceType>urn:dvb:metadata:source:dvb-dash</SourceType>
+      <DASHDeliveryParameters>
+        <UriBasedLocation contentType="application/dash+xml">
+          <URI>https://ftc05.akamaized.net/dash/live/2003270/ftc05/dash.mpd</URI>
+        </UriBasedLocation>
+      </DASHDeliveryParameters>
+    </ServiceInstance>
+    <ServiceName>TV Hope</ServiceName>
+    <ProviderName>freenet</ProviderName>
+    <RelatedMaterial>
+      <tva:HowRelated href="urn:dvb:metadata:cs:HowRelatedCS:2019:1001.2"/>
+      <tva:MediaLocator>
+        <tva:MediaUri contentType="image/png">https://stage.sofiadigital.fi/dvb/dvb-i-reference-application/backend/channel_icons/chicon_hopetv.png</tva:MediaUri>
+      </tva:MediaLocator>
+    </RelatedMaterial>
+    <ContentGuideServiceRef>cgsid_4</ContentGuideServiceRef>
+  </Service>
+  <Service version="1">
+    <UniqueIdentifier>sid5</UniqueIdentifier>
+    <ServiceInstance priority="2">
+      <SourceType>urn:dvb:metadata:source:dvb-dash</SourceType>
+      <DASHDeliveryParameters>
+        <UriBasedLocation contentType="application/dash+xml">
+          <URI>https://cmafref.akamaized.net/cmaf/live-ull/2009972/test9/out.mpd</URI>
+        </UriBasedLocation>
+      </DASHDeliveryParameters>
+    </ServiceInstance>
+    <ServiceName>Akamai Low Latency FFMPEG</ServiceName>
+    <ProviderName>Akamai</ProviderName>
+    <RelatedMaterial>
+      <tva:HowRelated href="urn:dvb:metadata:cs:HowRelatedCS:2019:1001.2"/>
+      <tva:MediaLocator>
+        <tva:MediaUri contentType="image/png">https://stage.sofiadigital.fi/dvb/dvb-i-reference-application/backend/channel_icons/chicon_akamai.png</tva:MediaUri>
+      </tva:MediaLocator>
+    </RelatedMaterial>
+    <ContentGuideServiceRef>cgsid_5</ContentGuideServiceRef>
+  </Service>
+  <Service version="1">
+    <UniqueIdentifier>sid6</UniqueIdentifier>
+    <ServiceInstance priority="1">
+      <SourceType>urn:dvb:metadata:source:dvb-dash</SourceType>
+      <DASHDeliveryParameters>
+        <UriBasedLocation contentType="application/dash+xml">
+          <URI>https://irtdashreference-i.akamaihd.net/dash/live/901161/keepixo1/manifestBR.mpd</URI>
+        </UriBasedLocation>
+      </DASHDeliveryParameters>
+    </ServiceInstance>
+    <ServiceName>BR</ServiceName>
+    <ProviderName>Bayerischer Rundfunk</ProviderName>
+    <RelatedMaterial>
+      <tva:HowRelated href="urn:dvb:metadata:cs:HowRelatedCS:2019:1001.2"/>
+      <tva:MediaLocator>
+        <tva:MediaUri contentType="image/png">https://stage.sofiadigital.fi/dvb/dvb-i-reference-application/backend/channel_icons/chicon_br_1.png</tva:MediaUri>
+      </tva:MediaLocator>
+    </RelatedMaterial>
+    <ContentGuideServiceRef>cgsid_6</ContentGuideServiceRef>
+  </Service>
+  <Service version="1">
+    <UniqueIdentifier>sid7</UniqueIdentifier>
+    <ServiceInstance priority="1">
+      <SourceType>urn:dvb:metadata:source:dvb-dash</SourceType>
+      <DASHDeliveryParameters>
+        <UriBasedLocation contentType="application/dash+xml">
+          <URI>https://irtdashreference-i.akamaihd.net/dash/live/901161/keepixo1/manifestBR2.mpd</URI>
+        </UriBasedLocation>
+      </DASHDeliveryParameters>
+    </ServiceInstance>
+    <ServiceName>BR2</ServiceName>
+    <ProviderName>Bayerischer Rundfunk</ProviderName>
+    <RelatedMaterial>
+      <tva:HowRelated href="urn:dvb:metadata:cs:HowRelatedCS:2019:1001.2"/>
+      <tva:MediaLocator>
+        <tva:MediaUri contentType="image/png">https://stage.sofiadigital.fi/dvb/dvb-i-reference-application/backend/channel_icons/chicon_br_hd.png</tva:MediaUri>
+      </tva:MediaLocator>
+    </RelatedMaterial>
+    <ContentGuideServiceRef>cgsid_7</ContentGuideServiceRef>
+  </Service>
+  <Service version="1">
+    <UniqueIdentifier>sid8</UniqueIdentifier>
+    <ServiceInstance priority="1">
+      <SourceType>urn:dvb:metadata:source:dvb-dash</SourceType>
+      <DASHDeliveryParameters>
+        <UriBasedLocation contentType="application/dash+xml">
+          <URI>https://testlowlat.harmonicinc.com/Content/DASH/Live/channel(cbr)/manifest.mpd</URI>
+        </UriBasedLocation>
+      </DASHDeliveryParameters>
+    </ServiceInstance>
+    <ServiceName>DASH CBR</ServiceName>
+    <ProviderName>Harmonic</ProviderName>
+    <RelatedMaterial>
+      <tva:HowRelated href="urn:dvb:metadata:cs:HowRelatedCS:2019:1001.2"/>
+      <tva:MediaLocator>
+        <tva:MediaUri contentType="image/png">https://stage.sofiadigital.fi/dvb/dvb-i-reference-application/backend/channel_icons/chicon_harmonic.png</tva:MediaUri>
+      </tva:MediaLocator>
+    </RelatedMaterial>
+    <ContentGuideServiceRef>cgsid_8</ContentGuideServiceRef>
+  </Service>
+  <Service version="1">
+    <UniqueIdentifier>sid9</UniqueIdentifier>
+    <ServiceInstance priority="1">
+      <SourceType>urn:dvb:metadata:source:dvb-dash</SourceType>
+      <DASHDeliveryParameters>
+        <UriBasedLocation contentType="application/dash+xml">
+          <URI>https://testlowlat.harmonicinc.com/Content/DASH/Live/channel(eyeq)/manifest.mpd</URI>
+        </UriBasedLocation>
+      </DASHDeliveryParameters>
+    </ServiceInstance>
+    <ServiceName>EyeQ</ServiceName>
+    <ProviderName>Harmonic</ProviderName>
+    <RelatedMaterial>
+      <tva:HowRelated href="urn:dvb:metadata:cs:HowRelatedCS:2019:1001.2"/>
+      <tva:MediaLocator>
+        <tva:MediaUri contentType="image/png">https://stage.sofiadigital.fi/dvb/dvb-i-reference-application/backend/channel_icons/chicon_harmonic.png</tva:MediaUri>
+      </tva:MediaLocator>
+    </RelatedMaterial>
+    <ContentGuideServiceRef>cgsid_9</ContentGuideServiceRef>
+  </Service>
+  <Service version="1">
+    <UniqueIdentifier>sid10</UniqueIdentifier>
+    <ServiceInstance priority="1">
+      <SourceType>urn:dvb:metadata:source:dvb-dash</SourceType>
+      <DASHDeliveryParameters>
+        <UriBasedLocation contentType="application/dash+xml">
+          <URI>https://testlowlat.harmonicinc.com/Content/DASH/Live/channel(dash_ll_number)/manifest.mpd</URI>
+        </UriBasedLocation>
+      </DASHDeliveryParameters>
+    </ServiceInstance>
+    <ServiceName>LL-DASH(number)</ServiceName>
+    <ProviderName>Harmonic</ProviderName>
+    <RelatedMaterial>
+      <tva:HowRelated href="urn:dvb:metadata:cs:HowRelatedCS:2019:1001.2"/>
+      <tva:MediaLocator>
+        <tva:MediaUri contentType="image/png">https://stage.sofiadigital.fi/dvb/dvb-i-reference-application/backend/channel_icons/chicon_harmonic.png</tva:MediaUri>
+      </tva:MediaLocator>
+    </RelatedMaterial>
+    <ContentGuideServiceRef>cgsid_10</ContentGuideServiceRef>
+  </Service>
+  <Service version="1">
+    <UniqueIdentifier>sid11</UniqueIdentifier>
+    <ServiceInstance priority="1">
+      <SourceType>urn:dvb:metadata:source:dvb-dash</SourceType>
+      <DASHDeliveryParameters>
+        <UriBasedLocation contentType="application/dash+xml">
+          <URI>https://testlowlat.harmonicinc.com/Content/DASH/Live/channel(dash_ll_time)/manifest.mpd</URI>
+        </UriBasedLocation>
+      </DASHDeliveryParameters>
+    </ServiceInstance>
+    <ServiceName>LL-DASH(time)</ServiceName>
+    <ProviderName>Harmonic</ProviderName>
+    <RelatedMaterial>
+      <tva:HowRelated href="urn:dvb:metadata:cs:HowRelatedCS:2019:1001.2"/>
+      <tva:MediaLocator>
+        <tva:MediaUri contentType="image/png">https://stage.sofiadigital.fi/dvb/dvb-i-reference-application/backend/channel_icons/chicon_harmonic.png</tva:MediaUri>
+      </tva:MediaLocator>
+    </RelatedMaterial>
+    <ContentGuideServiceRef>cgsid_11</ContentGuideServiceRef>
+  </Service>
+  <Service version="1">
+    <UniqueIdentifier>sid12</UniqueIdentifier>
+    <ServiceInstance priority="1">
+      <SourceType>urn:dvb:metadata:source:dvb-dash</SourceType>
+      <DASHDeliveryParameters>
+        <UriBasedLocation contentType="application/dash+xml">
+          <URI>https://testlowlat.harmonicinc.com/Content/DASH/Live/channel(EyeQ3)/manifest.mpd</URI>
+        </UriBasedLocation>
+      </DASHDeliveryParameters>
+    </ServiceInstance>
+    <ServiceName>EyeQ3</ServiceName>
+    <ProviderName>Harmonic</ProviderName>
+    <RelatedMaterial>
+      <tva:HowRelated href="urn:dvb:metadata:cs:HowRelatedCS:2019:1001.2"/>
+      <tva:MediaLocator>
+        <tva:MediaUri contentType="image/png">https://stage.sofiadigital.fi/dvb/dvb-i-reference-application/backend/channel_icons/chicon_harmonic.png</tva:MediaUri>
+      </tva:MediaLocator>
+    </RelatedMaterial>
+    <ContentGuideServiceRef>cgsid_12</ContentGuideServiceRef>
+  </Service>
+  <Service version="1">
+    <UniqueIdentifier>sid13</UniqueIdentifier>
+    <ServiceInstance priority="1">
+      <SourceType>urn:dvb:metadata:source:dvb-dash</SourceType>
+      <DASHDeliveryParameters>
+        <UriBasedLocation contentType="application/dash+xml">
+          <URI>https://testlowlat.harmonicinc.com/Content/DASH/Live/channel(EyeQ4)/manifest.mpd</URI>
+        </UriBasedLocation>
+      </DASHDeliveryParameters>
+    </ServiceInstance>
+    <ServiceName>EyeQ4</ServiceName>
+    <ProviderName>Harmonic</ProviderName>
+    <RelatedMaterial>
+      <tva:HowRelated href="urn:dvb:metadata:cs:HowRelatedCS:2019:1001.2"/>
+      <tva:MediaLocator>
+        <tva:MediaUri contentType="image/png">https://stage.sofiadigital.fi/dvb/dvb-i-reference-application/backend/channel_icons/chicon_harmonic.png</tva:MediaUri>
+      </tva:MediaLocator>
+    </RelatedMaterial>
+    <ContentGuideServiceRef>cgsid_13</ContentGuideServiceRef>
+  </Service>
+  <Service version="1">
+    <UniqueIdentifier>sid14</UniqueIdentifier>
+    <ServiceInstance priority="1">
+      <SourceType>urn:dvb:metadata:source:dvb-dash</SourceType>
+      <DASHDeliveryParameters>
+        <UriBasedLocation contentType="application/dash+xml">
+          <URI>https://testlowlat.harmonicinc.com/Content/DASH/Live/channel(EyeQ5)/manifest.mpd</URI>
+        </UriBasedLocation>
+      </DASHDeliveryParameters>
+    </ServiceInstance>
+    <ServiceName>EyeQ5</ServiceName>
+    <ProviderName>Harmonic</ProviderName>
+    <RelatedMaterial>
+      <tva:HowRelated href="urn:dvb:metadata:cs:HowRelatedCS:2019:1001.2"/>
+      <tva:MediaLocator>
+        <tva:MediaUri contentType="image/png">https://stage.sofiadigital.fi/dvb/dvb-i-reference-application/backend/channel_icons/chicon_harmonic.png</tva:MediaUri>
+      </tva:MediaLocator>
+    </RelatedMaterial>
+    <ContentGuideServiceRef>cgsid_14</ContentGuideServiceRef>
+  </Service>
+    <Service version="1">
+    <UniqueIdentifier>sid15</UniqueIdentifier>
+    <ServiceInstance priority="1">
+      <SourceType>urn:dvb:metadata:source:my-channels</SourceType>
+      <DASHDeliveryParameters>
+        <UriBasedLocation contentType="application/dash+xml">
+          <URI>https://testlowlat.harmonicinc.com/Content/DASH/Live/channel(EyeQ5)/manifest.mpd</URI>
+        </UriBasedLocation>
+      </DASHDeliveryParameters>
+    </ServiceInstance>
+    <ServiceName>My channels</ServiceName>
+    <ProviderName>My channels</ProviderName>
+    <RelatedMaterial>
+      <tva:HowRelated href="urn:dvb:metadata:cs:HowRelatedCS:2019:1001.2"/>
+      <tva:MediaLocator>
+        <tva:MediaUri contentType="image/png">https://stage.sofiadigital.fi/dvb/dvb-i-reference-application/backend/channel_icons/chicon_harmonic.png</tva:MediaUri>
+      </tva:MediaLocator>
+    </RelatedMaterial>
+    <ContentGuideServiceRef>cgsid_15</ContentGuideServiceRef>
+  </Service>
+</ServiceList>

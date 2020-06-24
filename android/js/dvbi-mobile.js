@@ -26,7 +26,7 @@ window.onload = function () {
   $('.epg').hide();
   $('.menubar').hide();
   // loadServicelist("../../backend/servicelist.php");
-  loadServicelist('../../backend/servicelists/example.xml');
+  loadServicelist('../example.xml');
   // getMyServicelist('http://172.30.1.21:3000/channel');
   uiHideTimeout = setTimeout(hideUI, 5000);
   $('.video_wrapper').on('click touchstart', resetHideTimeout);
